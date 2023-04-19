@@ -35,7 +35,6 @@ export default function ExpenseForm({ navigation, route }) {
     if (amount !== '' && type !== '' && desc !== '') {
       return true
     }
-
     return false
   }
 

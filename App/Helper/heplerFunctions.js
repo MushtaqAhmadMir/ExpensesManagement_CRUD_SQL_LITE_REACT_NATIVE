@@ -8,9 +8,6 @@ const addExpenses = (name, price, type, db, cb) => {
     let newDate = moment().format('DD MMM YYYY')
     console.log(db)
     db.transaction(async (tx) => {
-        // await tx.executeSql(
-        //     "INSERT INTO Users (Name, Age) VALUES ('" + name + "'," + age + ")"
-        // );
         await tx.executeSql(
             `INSERT INTO ${strings.EXPENSES} (Name, Amount,Date,Type) VALUES (?,?,?,?)`, [name, price, newDate, type], () => {
                 cb(true)

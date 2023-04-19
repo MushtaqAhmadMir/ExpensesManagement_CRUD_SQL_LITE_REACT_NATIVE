@@ -104,7 +104,7 @@ export default function MyExpenses({ navigation }) {
         <FloatingActionButton navigation={navigation} />
       </View>
       <Modal visible={isFilter} transparent >
-        <View style={{ height: windowHeight / 2, backgroundColor: 'white', marginTop: windowHeight / 2 }} >
+        <View style={{ height: windowHeight / 2, backgroundColor: 'rgba(0,0,0,0.6)', marginTop: windowHeight / 2 }} >
           {
             types.map(function (e) {
               return (
@@ -121,7 +121,7 @@ export default function MyExpenses({ navigation }) {
                 }
 
                 } style={{ marginVertical: 8, paddingVertical: 10, width: windowWidth, paddingHorizontal: 20, }}>
-                  <Text>{'✔  ' + e}</Text>
+                  <Text style={{color:colors.white}}>{'✔  ' + e}</Text>
                 </TouchableOpacity>
               )
             })
