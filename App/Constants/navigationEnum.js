@@ -1,0 +1,4 @@
+export default{
+    MY_EXPENSES:'MY_EXPENSES',
+    EXPENSE_FORM:'EXPENSE_FORM'
+}
